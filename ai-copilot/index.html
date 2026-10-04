@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Copilot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="app">
+
+        <!-- Main Content -->
+        <section class="workspace">
+            <header class="topbar">
+                <div>
+                    <h1>Project Workspace</h1>
+                    <p>Work smarter with AI Copilot</p>
+                </div>
+
+                <button class="copilot-toggle" id="openCopilot">
+                    ✨ AI Copilot
+                </button>
+            </header>
+
+            <div class="content">
+                <div class="welcome-card">
+                    <span class="badge">AI POWERED</span>
+                    <h2>What would you like to accomplish?</h2>
+                    <p>
+                        Ask Copilot to analyze information, generate content,
+                        summarize documents, or help you complete tasks.
+                    </p>
+
+                    <div class="quick-actions">
+                        <button data-prompt="Summarize my project">
+                            📝 Summarize project
+                        </button>
+
+                        <button data-prompt="Create a project plan">
+                            📋 Create project plan
+                        </button>
+
+                        <button data-prompt="Find potential issues">
+                            🔍 Find issues
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Copilot Sidebar -->
+        <aside class="copilot" id="copilot">
+
+            <div class="copilot-header">
+                <div class="copilot-title">
+                    <div class="ai-icon">✦</div>
+
+                    <div>
+                        <h2>AI Copilot</h2>
+                        <span>● Online</span>
+                    </div>
+                </div>
+
+                <button class="close-btn" id="closeCopilot">×</button>
+            </div>
+
+            <!-- Chat Messages -->
+            <div class="chat" id="chat">
+
+                <div class="message ai-message">
+                    <div class="avatar">✦</div>
+
+                    <div class="bubble">
+                        <p>
+                            Hi! I'm your AI Copilot. How can I help you today?
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Suggested Actions -->
+            <div class="suggestions">
+                <p>Suggested actions</p>
+
+                <button data-prompt="Summarize my project">
+                    Summarize project
+                </button>
+
+                <button data-prompt="Create a project plan">
+                    Create project plan
+                </button>
+
+                <button data-prompt="Give me some ideas">
+                    Give me ideas
+                </button>
+            </div>
+
+            <!-- Input -->
+            <div class="input-area">
+
+                <div class="input-box">
+                    <textarea
+                        id="messageInput"
+                        placeholder="Ask Copilot anything..."
+                        rows="1"
+                    ></textarea>
+
+                    <button id="sendBtn">➤</button>
+                </div>
+
+                <small>
+                    AI can make mistakes. Check important information.
+                </small>
+
+            </div>
+
+        </aside>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,357 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fb;
+    color: #172033;
+}
+
+button,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+/* Main Layout */
+
+.app {
+    min-height: 100vh;
+    display: flex;
+}
+
+/* Workspace */
+
+.workspace {
+    flex: 1;
+    min-width: 0;
+}
+
+.topbar {
+    height: 80px;
+    background: white;
+    border-bottom: 1px solid #e6e9ef;
+    padding: 0 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.topbar h1 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.topbar p {
+    color: #7b8497;
+    font-size: 14px;
+}
+
+.copilot-toggle {
+    background: #171c2c;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.copilot-toggle:hover {
+    transform: translateY(-2px);
+}
+
+/* Main Content */
+
+.content {
+    padding: 40px;
+}
+
+.welcome-card {
+    max-width: 800px;
+    margin: 60px auto;
+    background: white;
+    border: 1px solid #e7eaf0;
+    border-radius: 20px;
+    padding: 45px;
+    text-align: center;
+}
+
+.badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 7px 12px;
+    border-radius: 20px;
+    background: #eef0ff;
+    color: #5964d8;
+    margin-bottom: 20px;
+}
+
+.welcome-card h2 {
+    font-size: 30px;
+    margin-bottom: 14px;
+}
+
+.welcome-card > p {
+    color: #737c8f;
+    line-height: 1.7;
+    max-width: 600px;
+    margin: auto;
+}
+
+.quick-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.quick-actions button {
+    padding: 11px 15px;
+    border: 1px solid #e0e4eb;
+    background: white;
+    border-radius: 10px;
+    color: #4c566b;
+}
+
+.quick-actions button:hover {
+    background: #f5f6fa;
+}
+
+/* Copilot */
+
+.copilot {
+    width: 390px;
+    height: 100vh;
+    background: white;
+    border-left: 1px solid #e1e5ec;
+
+    display: flex;
+    flex-direction: column;
+
+    position: fixed;
+    right: 0;
+    top: 0;
+
+    z-index: 10;
+
+    transition: transform 0.3s ease;
+}
+
+.copilot.hidden {
+    transform: translateX(100%);
+}
+
+/* Header */
+
+.copilot-header {
+    height: 76px;
+    padding: 15px 20px;
+    border-bottom: 1px solid #e7e9ee;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copilot-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.ai-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+
+    display: grid;
+    place-items: center;
+
+    background: #171c2c;
+    color: white;
+}
+
+.copilot-title h2 {
+    font-size: 15px;
+}
+
+.copilot-title span {
+    color: #2ca66f;
+    font-size: 11px;
+}
+
+.close-btn {
+    width: 32px;
+    height: 32px;
+    background: transparent;
+    font-size: 24px;
+    color: #7c8495;
+    border-radius: 8px;
+}
+
+.close-btn:hover {
+    background: #f2f3f6;
+}
+
+/* Chat */
+
+.chat {
+    flex: 1;
+    padding: 22px;
+    overflow-y: auto;
+}
+
+.message {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 9px;
+
+    display: grid;
+    place-items: center;
+
+    background: #171c2c;
+    color: white;
+    font-size: 13px;
+
+    flex-shrink: 0;
+}
+
+.bubble {
+    max-width: 280px;
+    padding: 12px 14px;
+    background: #f4f5f8;
+    border-radius: 5px 14px 14px 14px;
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.user-message {
+    justify-content: flex-end;
+}
+
+.user-message .bubble {
+    background: #171c2c;
+    color: white;
+    border-radius: 14px 5px 14px 14px;
+}
+
+/* Suggestions */
+
+.suggestions {
+    padding: 0 20px 15px;
+}
+
+.suggestions p {
+    color: #858da0;
+    font-size: 12px;
+    margin-bottom: 9px;
+}
+
+.suggestions button {
+    background: #f7f8fa;
+    border: 1px solid #e8eaf0;
+    border-radius: 8px;
+    padding: 8px 11px;
+    margin: 3px;
+    font-size: 12px;
+    color: #555e70;
+}
+
+.suggestions button:hover {
+    background: #eef0f5;
+}
+
+/* Input */
+
+.input-area {
+    padding: 15px 20px 20px;
+    border-top: 1px solid #e7e9ee;
+}
+
+.input-box {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+
+    border: 1px solid #dfe3ea;
+    border-radius: 12px;
+    padding: 8px;
+}
+
+.input-box:focus-within {
+    border-color: #8b92a5;
+}
+
+textarea {
+    flex: 1;
+    resize: none;
+    border: none;
+    outline: none;
+    padding: 6px;
+    min-height: 36px;
+    max-height: 100px;
+}
+
+#sendBtn {
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+    background: #171c2c;
+    color: white;
+}
+
+.input-area small {
+    display: block;
+    margin-top: 8px;
+    text-align: center;
+    color: #9aa1af;
+    font-size: 10px;
+}
+
+/* Responsive */
+
+@media (max-width: 700px) {
+
+    .copilot {
+        width: 100%;
+    }
+
+    .topbar {
+        padding: 0 18px;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .welcome-card {
+        margin: 30px auto;
+        padding: 30px 20px;
+    }
+
+    .welcome-card h2 {
+        font-size: 24px;
+    }
+
+    .copilot-toggle {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+}

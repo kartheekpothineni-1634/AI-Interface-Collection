@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Insight Cards</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="dashboard">
+
+        <header class="header">
+            <div>
+                <p class="eyebrow">AI ANALYTICS</p>
+                <h1>AI Insights</h1>
+                <p class="subtitle">
+                    Intelligent insights generated from your latest data.
+                </p>
+            </div>
+
+            <button class="refresh-btn" id="refreshBtn">
+                ↻ Refresh insights
+            </button>
+        </header>
+
+
+        <section class="overview">
+
+            <div class="stat">
+                <span>Total Users</span>
+                <strong>24,892</strong>
+                <small class="positive">↑ 18.4%</small>
+            </div>
+
+            <div class="stat">
+                <span>Revenue</span>
+                <strong>$48,290</strong>
+                <small class="positive">↑ 12.8%</small>
+            </div>
+
+            <div class="stat">
+                <span>Conversion</span>
+                <strong>7.42%</strong>
+                <small class="negative">↓ 2.1%</small>
+            </div>
+
+        </section>
+
+
+        <section class="insights-section">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Generated Insights</h2>
+                    <p>AI has identified these important patterns.</p>
+                </div>
+
+                <span class="insight-count" id="insightCount">
+                    4 insights
+                </span>
+            </div>
+
+
+            <div class="insights-grid" id="insightsGrid">
+
+                <!-- Insight 1 -->
+
+                <article class="insight-card high">
+
+                    <div class="card-top">
+                        <div class="icon">✦</div>
+
+                        <span class="priority">
+                            High impact
+                        </span>
+
+                        <button
+                            class="more-btn"
+                            aria-label="More options"
+                        >
+                            ⋯
+                        </button>
+                    </div>
+
+                    <h3>Traffic increased significantly</h3>
+
+                    <p>
+                        Your website traffic increased by 24% this week.
+                        Organic search is the largest contributor.
+                    </p>
+
+                    <div class="metric">
+                        <strong>+24%</strong>
+                        <span>Organic traffic</span>
+                    </div>
+
+                    <div class="card-actions">
+                        <button class="details-btn">
+                            View details
+                        </button>
+
+                        <button class="dismiss-btn">
+                            Dismiss
+                        </button>
+                    </div>
+
+                </article>
+
+
+                <!-- Insight 2 -->
+
+                <article class="insight-card">
+
+                    <div class="card-top">
+                        <div class="icon">✦</div>
+
+                        <span class="priority">
+                            Opportunity
+                        </span>
+
+                        <button
+                            class="more-btn"
+                            aria-label="More options"
+                        >
+                            ⋯
+                        </button>
+                    </div>
+
+                    <h3>Mobile users are highly engaged</h3>
+
+                    <p>
+                        Mobile visitors spend 32% more time on your
+                        product pages than desktop visitors.
+                    </p>
+
+                    <div class="metric">
+                        <strong>4m 32s</strong>
+                        <span>Average session</span>
+                    </div>
+
+                    <div class="card-actions">
+                        <button class="details-btn">
+                            View details
+                        </button>
+
+                        <button class="dismiss-btn">
+                            Dismiss
+                        </button>
+                    </div>
+
+                </article>
+
+
+                <!-- Insight 3 -->
+
+                <article class="insight-card warning">
+
+                    <div class="card-top">
+                        <div class="icon">✦</div>
+
+                        <span class="priority">
+                            Attention
+                        </span>
+
+                        <button
+                            class="more-btn"
+                            aria-label="More options"
+                        >
+                            ⋯
+                        </button>
+                    </div>
+
+                    <h3>Conversion rate dropped</h3>
+
+                    <p>
+                        Your checkout conversion decreased by 2.1%.
+                        Most drop-offs happen on the payment step.
+                    </p>
+
+                    <div class="metric">
+                        <strong>-2.1%</strong>
+                        <span>Conversion rate</span>
+                    </div>
+
+                    <div class="card-actions">
+                        <button class="details-btn">
+                            Investigate
+                        </button>
+
+                        <button class="dismiss-btn">
+                            Dismiss
+                        </button>
+                    </div>
+
+                </article>
+
+
+                <!-- Insight 4 -->
+
+                <article class="insight-card">
+
+                    <div class="card-top">
+                        <div class="icon">✦</div>
+
+                        <span class="priority">
+                            Trend
+                        </span>
+
+                        <button
+                            class="more-btn"
+                            aria-label="More options"
+                        >
+                            ⋯
+                        </button>
+                    </div>
+
+                    <h3>Returning customers increased</h3>
+
+                    <p>
+                        Returning customers now represent 41% of your
+                        weekly purchases.
+                    </p>
+
+                    <div class="metric">
+                        <strong>41%</strong>
+                        <span>Returning customers</span>
+                    </div>
+
+                    <div class="card-actions">
+                        <button class="details-btn">
+                            View details
+                        </button>
+
+                        <button class="dismiss-btn">
+                            Dismiss
+                        </button>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <div class="toast" id="toast">
+        Insight dismissed
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Command Bar</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="app">
+
+        <!-- Header -->
+
+        <header class="topbar">
+
+            <div>
+                <p class="eyebrow">AI WORKSPACE</p>
+
+                <h1>Project Workspace</h1>
+
+                <p>
+                    Use AI commands to work faster.
+                </p>
+            </div>
+
+            <button id="openCommand">
+                ✦ Ask AI
+                <span>Ctrl K</span>
+            </button>
+
+        </header>
+
+
+        <!-- Main Content -->
+
+        <section class="workspace">
+
+            <div class="workspace-card">
+
+                <div class="document-icon">
+                    📄
+                </div>
+
+                <h2>Project Overview</h2>
+
+                <p>
+                    Select an AI command to analyze, summarize,
+                    rewrite, or organize your project information.
+                </p>
+
+                <button class="command-trigger" id="mainTrigger">
+                    <span>⌘</span>
+                    Open AI Command Bar
+                    <kbd>Ctrl K</kbd>
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Overlay -->
+
+    <div class="overlay hidden" id="overlay"></div>
+
+
+    <!-- Command Bar -->
+
+    <section class="command-wrapper hidden" id="commandWrapper">
+
+        <div class="command-bar" role="dialog">
+
+            <!-- Search -->
+
+            <div class="search-area">
+
+                <span class="search-icon">⌕</span>
+
+                <input
+                    type="text"
+                    id="commandInput"
+                    placeholder="Ask AI or search commands..."
+                    autocomplete="off"
+                >
+
+                <kbd>ESC</kbd>
+
+            </div>
+
+
+            <!-- Commands -->
+
+            <div class="command-content">
+
+                <p class="group-title">
+                    Suggested commands
+                </p>
+
+
+                <div id="commandList">
+
+                    <button
+                        class="command-item selected"
+                        data-command="Summarize this project"
+                    >
+
+                        <span class="item-icon">📝</span>
+
+                        <span class="item-info">
+                            <strong>Summarize this project</strong>
+                            <small>Generate a quick project summary</small>
+                        </span>
+
+                        <span class="shortcut">S</span>
+
+                    </button>
+
+
+                    <button
+                        class="command-item"
+                        data-command="Analyze project performance"
+                    >
+
+                        <span class="item-icon">📊</span>
+
+                        <span class="item-info">
+                            <strong>Analyze project performance</strong>
+                            <small>Find important performance patterns</small>
+                        </span>
+
+                        <span class="shortcut">A</span>
+
+                    </button>
+
+
+                    <button
+                        class="command-item"
+                        data-command="Rewrite selected content"
+                    >
+
+                        <span class="item-icon">✍️</span>
+
+                        <span class="item-info">
+                            <strong>Rewrite selected content</strong>
+                            <small>Improve clarity and readability</small>
+                        </span>
+
+                        <span class="shortcut">R</span>
+
+                    </button>
+
+
+                    <button
+                        class="command-item"
+                        data-command="Generate project ideas"
+                    >
+
+                        <span class="item-icon">💡</span>
+
+                        <span class="item-info">
+                            <strong>Generate project ideas</strong>
+                            <small>Create new ideas using AI</small>
+                        </span>
+
+                        <span class="shortcut">I</span>
+
+                    </button>
+
+
+                    <button
+                        class="command-item"
+                        data-command="Create project report"
+                    >
+
+                        <span class="item-icon">📋</span>
+
+                        <span class="item-info">
+                            <strong>Create project report</strong>
+                            <small>Generate a structured report</small>
+                        </span>
+
+                        <span class="shortcut">P</span>
+
+                    </button>
+
+                </div>
+
+
+                <!-- No Results -->
+
+                <div class="no-results hidden" id="noResults">
+                    <span>⌕</span>
+
+                    <strong>No commands found</strong>
+
+                    <p>
+                        Try asking AI something else.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- Footer -->
+
+            <footer class="command-footer">
+
+                <span>
+                    ↑↓ Navigate
+                </span>
+
+                <span>
+                    ↵ Select
+                </span>
+
+                <span>
+                    ESC Close
+                </span>
+
+                <span class="ai-label">
+                    ✦ AI Command Bar
+                </span>
+
+            </footer>
+
+        </div>
+
+    </section>
+
+
+    <!-- Result -->
+
+    <div class="result-panel hidden" id="resultPanel">
+
+        <div class="result-card">
+
+            <div class="result-icon">
+                ✦
+            </div>
+
+            <div>
+                <p class="result-label">
+                    AI COMMAND EXECUTED
+                </p>
+
+                <h3 id="resultTitle">
+                    Command completed
+                </h3>
+
+                <p id="resultText">
+                    AI is processing your request.
+                </p>
+            </div>
+
+            <button id="closeResult">
+                ×
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

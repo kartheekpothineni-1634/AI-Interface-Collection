@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Recommendations</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <!-- Header -->
+
+        <header class="header">
+
+            <div>
+                <p class="eyebrow">AI ASSISTANT</p>
+
+                <h1>Recommendations</h1>
+
+                <p class="subtitle">
+                    Personalized suggestions based on your recent activity.
+                </p>
+            </div>
+
+            <div class="ai-status">
+                <span class="status-dot"></span>
+                AI Analysis Active
+            </div>
+
+        </header>
+
+
+        <!-- Summary -->
+
+        <section class="summary">
+
+            <div class="summary-card">
+                <span>Recommendations</span>
+                <strong id="recommendationCount">4</strong>
+            </div>
+
+            <div class="summary-card">
+                <span>High confidence</span>
+                <strong>3</strong>
+            </div>
+
+            <div class="summary-card">
+                <span>Potential impact</span>
+                <strong>+18%</strong>
+            </div>
+
+        </section>
+
+
+        <!-- Recommendations -->
+
+        <section class="recommendations">
+
+            <div class="section-header">
+
+                <div>
+                    <h2>For You</h2>
+
+                    <p>
+                        AI recommendations based on your current data.
+                    </p>
+                </div>
+
+                <button id="refreshBtn">
+                    ↻ Refresh
+                </button>
+
+            </div>
+
+
+            <div class="recommendation-list" id="recommendationList">
+
+
+                <!-- Recommendation 1 -->
+
+                <article class="recommendation-card">
+
+                    <div class="card-icon">
+                        ✦
+                    </div>
+
+                    <div class="card-content">
+
+                        <div class="card-heading">
+
+                            <div>
+                                <span class="category">
+                                    Marketing
+                                </span>
+
+                                <h3>
+                                    Increase your campaign budget
+                                </h3>
+                            </div>
+
+                            <span class="confidence high">
+                                94% confidence
+                            </span>
+
+                        </div>
+
+                        <p>
+                            Your campaign has maintained a high conversion
+                            rate while reaching its current budget limit.
+                            Increasing the budget could generate additional
+                            conversions.
+                        </p>
+
+                        <div class="reason">
+
+                            <strong>Why AI recommends this</strong>
+
+                            <span>
+                                Conversion rate is 28% above your average.
+                            </span>
+
+                        </div>
+
+                        <div class="recommendation-footer">
+
+                            <button class="accept-btn">
+                                Apply recommendation
+                            </button>
+
+                            <button class="why-btn">
+                                Why?
+                            </button>
+
+                            <button class="dismiss-btn">
+                                Dismiss
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Recommendation 2 -->
+
+                <article class="recommendation-card">
+
+                    <div class="card-icon">
+                        ✦
+                    </div>
+
+                    <div class="card-content">
+
+                        <div class="card-heading">
+
+                            <div>
+                                <span class="category">
+                                    Product
+                                </span>
+
+                                <h3>
+                                    Highlight your most popular feature
+                                </h3>
+                            </div>
+
+                            <span class="confidence high">
+                                89% confidence
+                            </span>
+
+                        </div>
+
+                        <p>
+                            Users who discover this feature are more likely
+                            to become returning customers.
+                        </p>
+
+                        <div class="reason">
+
+                            <strong>Why AI recommends this</strong>
+
+                            <span>
+                                Feature usage correlates with 34% higher retention.
+                            </span>
+
+                        </div>
+
+                        <div class="recommendation-footer">
+
+                            <button class="accept-btn">
+                                Apply recommendation
+                            </button>
+
+                            <button class="why-btn">
+                                Why?
+                            </button>
+
+                            <button class="dismiss-btn">
+                                Dismiss
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Recommendation 3 -->
+
+                <article class="recommendation-card">
+
+                    <div class="card-icon">
+                        ✦
+                    </div>
+
+                    <div class="card-content">
+
+                        <div class="card-heading">
+
+                            <div>
+                                <span class="category">
+                                    Customer Success
+                                </span>
+
+                                <h3>
+                                    Follow up with inactive customers
+                                </h3>
+                            </div>
+
+                            <span class="confidence medium">
+                                76% confidence
+                            </span>
+
+                        </div>
+
+                        <p>
+                            Several customers who were previously active
+                            have not returned recently.
+                        </p>
+
+                        <div class="reason">
+
+                            <strong>Why AI recommends this</strong>
+
+                            <span>
+                                126 customers have been inactive for 14+ days.
+                            </span>
+
+                        </div>
+
+                        <div class="recommendation-footer">
+
+                            <button class="accept-btn">
+                                Create campaign
+                            </button>
+
+                            <button class="why-btn">
+                                Why?
+                            </button>
+
+                            <button class="dismiss-btn">
+                                Dismiss
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Recommendation 4 -->
+
+                <article class="recommendation-card">
+
+                    <div class="card-icon">
+                        ✦
+                    </div>
+
+                    <div class="card-content">
+
+                        <div class="card-heading">
+
+                            <div>
+                                <span class="category">
+                                    Analytics
+                                </span>
+
+                                <h3>
+                                    Review your checkout experience
+                                </h3>
+                            </div>
+
+                            <span class="confidence medium">
+                                72% confidence
+                            </span>
+
+                        </div>
+
+                        <p>
+                            A noticeable number of users leave your checkout
+                            before completing their purchase.
+                        </p>
+
+                        <div class="reason">
+
+                            <strong>Why AI recommends this</strong>
+
+                            <span>
+                                Checkout abandonment increased by 11%.
+                            </span>
+
+                        </div>
+
+                        <div class="recommendation-footer">
+
+                            <button class="accept-btn">
+                                Investigate
+                            </button>
+
+                            <button class="why-btn">
+                                Why?
+                            </button>
+
+                            <button class="dismiss-btn">
+                                Dismiss
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Toast -->
+
+    <div class="toast" id="toast"></div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
