@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Summary</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="app">
+
+        <!-- Header -->
+
+        <header class="header">
+
+            <a href="../ai-search/index.html" class="logo">
+                <span class="logo-icon">✦</span>
+                <span>AI Summary</span>
+            </a>
+
+            <button class="history-btn" id="historyBtn">
+                History
+            </button>
+
+        </header>
+
+
+        <!-- Page Heading -->
+
+        <section class="intro">
+
+            <span class="badge">✨ AI-Powered Summary</span>
+
+            <h1>Understand more in less time.</h1>
+
+            <p>
+                Turn long articles and documents into clear,
+                useful summaries with AI.
+            </p>
+
+        </section>
+
+
+        <!-- Document -->
+
+        <section class="document-card">
+
+            <div class="document-header">
+
+                <div class="document-info">
+
+                    <div class="document-icon">
+                        📄
+                    </div>
+
+                    <div>
+                        <span>DOCUMENT</span>
+                        <h2>The Future of Artificial Intelligence</h2>
+                    </div>
+
+                </div>
+
+                <span class="reading-time">
+                    8 min read
+                </span>
+
+            </div>
+
+
+            <div class="document-preview">
+
+                <p>
+                    Artificial intelligence is rapidly changing the
+                    way people work, learn, communicate, and create.
+                    Modern AI systems can understand language,
+                    analyze information, generate content, and
+                    assist people with complex tasks.
+                </p>
+
+                <p>
+                    As these technologies become more capable,
+                    organizations are exploring new ways to integrate
+                    AI into everyday workflows while considering
+                    reliability, privacy, safety, and responsible use.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Summary -->
+
+        <section class="summary-card">
+
+            <div class="summary-header">
+
+                <div class="summary-title">
+
+                    <div class="ai-icon">
+                        ✦
+                    </div>
+
+                    <div>
+                        <h2>AI Summary</h2>
+                        <span>Generated just now</span>
+                    </div>
+
+                </div>
+
+
+                <div class="summary-actions">
+
+                    <button id="copyBtn">
+                        Copy
+                    </button>
+
+                    <button id="regenerateBtn">
+                        ↻ Regenerate
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Summary Length -->
+
+            <div class="summary-controls">
+
+                <span>Summary length</span>
+
+                <div class="length-buttons">
+
+                    <button
+                        class="length-btn active"
+                        data-length="short"
+                    >
+                        Short
+                    </button>
+
+                    <button
+                        class="length-btn"
+                        data-length="medium"
+                    >
+                        Medium
+                    </button>
+
+                    <button
+                        class="length-btn"
+                        data-length="detailed"
+                    >
+                        Detailed
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- AI Text -->
+
+            <div class="summary-content" id="summaryContent">
+
+                <p>
+                    Artificial intelligence is transforming how people
+                    work, learn, and create by providing systems that
+                    can understand information and generate useful
+                    content.
+                </p>
+
+                <p>
+                    Organizations are increasingly integrating AI into
+                    everyday workflows while focusing on reliability,
+                    privacy, safety, and responsible use.
+                </p>
+
+            </div>
+
+
+            <!-- Key Points -->
+
+            <div class="key-points">
+
+                <h3>Key points</h3>
+
+                <div class="point">
+
+                    <span>01</span>
+
+                    <p>
+                        AI is becoming part of everyday work and
+                        creative workflows.
+                    </p>
+
+                </div>
+
+                <div class="point">
+
+                    <span>02</span>
+
+                    <p>
+                        Modern AI can understand language and
+                        generate different types of content.
+                    </p>
+
+                </div>
+
+                <div class="point">
+
+                    <span>03</span>
+
+                    <p>
+                        Responsible AI requires attention to safety,
+                        privacy, and reliability.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Expand -->
+
+            <button class="expand-btn" id="expandBtn">
+                Show more ↓
+            </button>
+
+
+            <!-- Footer -->
+
+            <div class="summary-footer">
+
+                <span>
+                    ✦ Generated by AI
+                </span>
+
+                <div class="feedback">
+
+                    <button id="likeBtn">👍</button>
+
+                    <button id="dislikeBtn">👎</button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Toast -->
+
+    <div class="toast" id="toast">
+        Summary copied
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
