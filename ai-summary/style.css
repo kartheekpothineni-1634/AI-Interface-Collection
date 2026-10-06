@@ -1,0 +1,512 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter, Arial, sans-serif;
+    background: #f7f7f9;
+    color: #18181b;
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+}
+
+.app {
+    width: min(850px, 92%);
+    margin: auto;
+}
+
+
+/* Header */
+
+.header {
+    height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    text-decoration: none;
+    color: #18181b;
+
+    font-weight: 700;
+}
+
+.logo-icon {
+    width: 35px;
+    height: 35px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 10px;
+
+    background: #18181b;
+    color: white;
+}
+
+.history-btn {
+    border: 1px solid #ddd;
+
+    background: white;
+
+    padding: 8px 15px;
+
+    border-radius: 9px;
+}
+
+
+/* Intro */
+
+.intro {
+    text-align: center;
+
+    padding: 65px 0 40px;
+}
+
+.badge {
+    display: inline-block;
+
+    padding: 7px 14px;
+
+    border: 1px solid #e2e2e2;
+
+    border-radius: 30px;
+
+    background: white;
+
+    color: #6754e9;
+
+    font-size: 12px;
+
+    margin-bottom: 18px;
+}
+
+.intro h1 {
+    font-size: clamp(34px, 6vw, 55px);
+
+    letter-spacing: -2px;
+
+    line-height: 1.05;
+}
+
+.intro p {
+    max-width: 540px;
+
+    margin: 18px auto;
+
+    color: #777;
+
+    line-height: 1.6;
+}
+
+
+/* Document */
+
+.document-card {
+    background: white;
+
+    border: 1px solid #e3e3e3;
+
+    border-radius: 16px;
+
+    margin-bottom: 18px;
+
+    overflow: hidden;
+}
+
+.document-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 18px 20px;
+
+    border-bottom: 1px solid #eee;
+}
+
+.document-info {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.document-icon {
+    width: 40px;
+    height: 40px;
+
+    display: grid;
+    place-items: center;
+
+    background: #f1f1f1;
+
+    border-radius: 10px;
+}
+
+.document-info span {
+    color: #999;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+.document-info h2 {
+    font-size: 15px;
+
+    margin-top: 3px;
+}
+
+.reading-time {
+    color: #888;
+
+    font-size: 12px;
+}
+
+.document-preview {
+    padding: 20px;
+
+    color: #666;
+
+    line-height: 1.7;
+
+    font-size: 14px;
+}
+
+.document-preview p + p {
+    margin-top: 13px;
+}
+
+
+/* Summary Card */
+
+.summary-card {
+    background: white;
+
+    border: 1px solid #ddd;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.05);
+}
+
+
+/* Header */
+
+.summary-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px;
+
+    border-bottom: 1px solid #eee;
+}
+
+.summary-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.ai-icon {
+    width: 38px;
+    height: 38px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 10px;
+
+    background: #f0edff;
+
+    color: #6754e9;
+}
+
+.summary-title h2 {
+    font-size: 17px;
+}
+
+.summary-title span {
+    display: block;
+
+    color: #999;
+
+    font-size: 11px;
+
+    margin-top: 3px;
+}
+
+.summary-actions {
+    display: flex;
+
+    gap: 7px;
+}
+
+.summary-actions button {
+    border: 1px solid #ddd;
+
+    background: white;
+
+    padding: 7px 11px;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+}
+
+
+/* Controls */
+
+.summary-controls {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 14px 20px;
+
+    background: #fafafa;
+
+    border-bottom: 1px solid #eee;
+
+    font-size: 12px;
+
+    color: #777;
+}
+
+.length-buttons {
+    display: flex;
+
+    gap: 4px;
+}
+
+.length-btn {
+    border: none;
+
+    background: transparent;
+
+    padding: 6px 10px;
+
+    border-radius: 7px;
+
+    color: #777;
+
+    font-size: 11px;
+}
+
+.length-btn.active {
+    background: white;
+
+    color: #18181b;
+
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Summary Content */
+
+.summary-content {
+    padding: 25px 25px 10px;
+
+    color: #444;
+
+    line-height: 1.75;
+
+    font-size: 15px;
+}
+
+.summary-content p {
+    margin-bottom: 17px;
+}
+
+
+/* Key Points */
+
+.key-points {
+    padding: 10px 25px 20px;
+}
+
+.key-points h3 {
+    font-size: 14px;
+
+    margin-bottom: 13px;
+}
+
+.point {
+    display: flex;
+
+    gap: 13px;
+
+    padding: 12px 0;
+
+    border-top: 1px solid #eee;
+}
+
+.point span {
+    color: #6754e9;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+.point p {
+    color: #555;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* Expand */
+
+.expand-btn {
+    margin: 0 25px 20px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #6754e9;
+
+    font-size: 13px;
+}
+
+
+/* Footer */
+
+.summary-footer {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 14px 20px;
+
+    border-top: 1px solid #eee;
+
+    color: #999;
+
+    font-size: 11px;
+}
+
+.feedback {
+    display: flex;
+
+    gap: 5px;
+}
+
+.feedback button {
+    border: 1px solid #ddd;
+
+    background: white;
+
+    border-radius: 7px;
+
+    padding: 5px 8px;
+}
+
+
+/* Toast */
+
+.toast {
+    position: fixed;
+
+    bottom: 25px;
+    left: 50%;
+
+    transform: translate(-50%, 80px);
+
+    opacity: 0;
+
+    background: #18181b;
+
+    color: white;
+
+    padding: 11px 18px;
+
+    border-radius: 9px;
+
+    transition: 0.3s;
+}
+
+.toast.show {
+    transform: translate(-50%, 0);
+
+    opacity: 1;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .intro {
+        padding: 45px 0 30px;
+    }
+
+    .document-header {
+        align-items: flex-start;
+    }
+
+    .reading-time {
+        display: none;
+    }
+
+    .summary-header {
+        align-items: flex-start;
+
+        gap: 15px;
+
+        flex-direction: column;
+    }
+
+    .summary-actions {
+        width: 100%;
+    }
+
+    .summary-actions button {
+        flex: 1;
+    }
+
+    .summary-controls {
+        align-items: flex-start;
+
+        gap: 10px;
+
+        flex-direction: column;
+    }
+
+    .summary-content {
+        padding: 20px 18px 5px;
+    }
+
+    .key-points {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .expand-btn {
+        margin-left: 18px;
+    }
+}

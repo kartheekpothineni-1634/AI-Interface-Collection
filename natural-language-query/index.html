@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Natural Language Query</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="app">
+
+        <!-- Header -->
+
+        <header class="header">
+
+            <a href="../ai-search/index.html" class="logo">
+                <span class="logo-icon">✦</span>
+                <span>Ask AI</span>
+            </a>
+
+            <button class="history-btn" id="historyBtn">
+                History
+            </button>
+
+        </header>
+
+
+        <!-- Hero -->
+
+        <section class="hero">
+
+            <span class="badge">
+                ✨ Natural Language Interface
+            </span>
+
+            <h1>
+                Ask your data
+                <span>anything.</span>
+            </h1>
+
+            <p>
+                Ask questions naturally and let AI turn your
+                request into useful information.
+            </p>
+
+        </section>
+
+
+        <!-- Query Box -->
+
+        <section class="query-section">
+
+            <form class="query-box" id="queryForm">
+
+                <div class="query-icon">
+                    ✦
+                </div>
+
+                <textarea
+                    id="queryInput"
+                    placeholder="Ask something like: Show me students who scored above 80..."
+                    rows="3"
+                ></textarea>
+
+                <div class="query-footer">
+
+                    <span id="characterCount">
+                        0 / 300
+                    </span>
+
+                    <button
+                        type="submit"
+                        id="askButton"
+                    >
+                        Ask AI
+                        <span>↑</span>
+                    </button>
+
+                </div>
+
+            </form>
+
+
+            <!-- Suggestions -->
+
+            <div class="suggestions">
+
+                <span>Try asking:</span>
+
+                <button class="suggestion">
+                    Show students who scored above 80
+                </button>
+
+                <button class="suggestion">
+                    Which department has the highest average?
+                </button>
+
+                <button class="suggestion">
+                    Show the top 5 performers
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Loading -->
+
+        <section
+            class="loading"
+            id="loading"
+            hidden
+        >
+
+            <div class="spinner"></div
+

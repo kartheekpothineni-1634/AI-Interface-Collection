@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Search</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="app">
+
+        <header class="header">
+            <div class="logo">
+                <span class="logo-icon">✦</span>
+                <span>AI Search</span>
+            </div>
+
+            <button class="history-btn" id="historyBtn">
+                History
+            </button>
+        </header>
+
+        <section class="hero">
+            <span class="badge">✨ Intelligent Search</span>
+
+            <h1>
+                Search smarter with
+                <span>AI</span>
+            </h1>
+
+            <p class="subtitle">
+                Ask questions naturally and get clear, intelligent answers.
+            </p>
+
+            <form class="search-box" id="searchForm">
+                <span class="search-icon">⌕</span>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Ask anything..."
+                    autocomplete="off"
+                >
+
+                <button type="button" class="voice-btn" id="voiceBtn">
+                    🎙
+                </button>
+
+                <button type="submit" class="search-btn">
+                    Search
+                </button>
+            </form>
+
+            <div class="suggestions">
+                <p>Try asking</p>
+
+                <div class="suggestion-list">
+                    <button class="suggestion">
+                        What is generative AI?
+                    </button>
+
+                    <button class="suggestion">
+                        How does machine learning work?
+                    </button>
+
+                    <button class="suggestion">
+                        Explain quantum computing simply
+                    </button>
+
+                    <button class="suggestion">
+                        What are the latest AI trends?
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="recent-section">
+            <div class="section-heading">
+                <h2>Recent searches</h2>
+                <button id="clearHistory">Clear all</button>
+            </div>
+
+            <div class="recent-list" id="recentList">
+                <div class="empty-state">
+                    <span>⌕</span>
+                    <p>Your recent searches will appear here.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="toast" id="toast">
+        Search submitted
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
