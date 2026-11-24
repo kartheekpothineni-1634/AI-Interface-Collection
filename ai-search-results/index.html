@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Search Results</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Header -->
+
+        <header class="header">
+
+            <a href="../ai-search/index.html" class="logo">
+                <span class="logo-icon">✦</span>
+                <span>AI Search</span>
+            </a>
+
+            <button class="new-search" id="newSearch">
+                + New Search
+            </button>
+
+        </header>
+
+
+        <!-- Search Bar -->
+
+        <section class="search-section">
+
+            <form class="search-box" id="searchForm">
+
+                <span class="search-icon">⌕</span>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    value="What is generative AI?"
+                    aria-label="Search"
+                >
+
+                <button type="submit">
+                    Search
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- Main Content -->
+
+        <main class="content">
+
+            <div class="main-column">
+
+                <!-- Search Query -->
+
+                <div class="query-label">
+                    Search results for
+                </div>
+
+                <h1 id="queryTitle">
+                    What is generative AI?
+                </h1>
+
+
+                <!-- AI Answer -->
+
+                <section class="answer-card">
+
+                    <div class="answer-header">
+
+                        <div class="ai-title">
+                            <span class="ai-icon">✦</span>
+
+                            <div>
+                                <strong>AI Answer</strong>
+                                <span>Generated just now</span>
+                            </div>
+                        </div>
+
+                        <button
+                            class="copy-btn"
+                            id="copyBtn"
+                        >
+                            Copy
+                        </button>
+
+                    </div>
+
+
+                    <div class="answer-content">
+
+                        <p>
+                            Generative AI is a type of artificial
+                            intelligence that can create new content
+                            such as text, images, audio, video, and code.
+                        </p>
+
+                        <p>
+                            Unlike traditional AI systems that mainly
+                            analyze or classify existing information,
+                            generative AI models learn patterns from
+                            large datasets and use those patterns to
+                            produce new outputs.
+                        </p>
+
+                        <h3>How does it work?</h3>
+
+                        <p>
+                            Modern generative AI systems commonly use
+                            machine learning models trained on large
+                            collections of data. When a user provides
+                            a prompt, the model predicts and generates
+                            an appropriate response.
+                        </p>
+
+                        <ul>
+                            <li>Users provide a prompt.</li>
+                            <li>The AI processes the request.</li>
+                            <li>The model generates an output.</li>
+                            <li>The user can refine the result.</li>
+                        </ul>
+
+                    </div>
+
+
+                    <!-- Feedback -->
+
+                    <div class="feedback">
+
+                        <span>Was this answer helpful?</span>
+
+                        <button id="likeBtn">
+                            👍
+                        </button>
+
+                        <button id="dislikeBtn">
+                            👎
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+                <!-- Sources -->
+
+                <section class="sources">
+
+                    <div class="section-title">
+                        <h2>Sources</h2>
+                        <span>3 references</span>
+                    </div>
+
+
+                    <div class="source-grid">
+
+                        <article class="source-card">
+
+                            <div class="source-number">01</div>
+
+                            <div>
+                                <span class="source-type">
+                                    Research
+                                </span>
+
+                                <h3>
+                                    Introduction to Generative AI
+                                </h3>
+
+                                <p>
+                                    Overview of generative artificial
+                                    intelligence and its applications.
+                                </p>
+                            </div>
+
+                            <button>↗</button>
+
+                        </article>
+
+
+                        <article class="source-card">
+
+                            <div class="source-number">02</div>
+
+                            <div>
+                                <span class="source-type">
+                                    Documentation
+                                </span>
+
+                                <h3>
+                                    Understanding AI Models
+                                </h3>
+
+                                <p>
+                                    Learn how modern machine learning
+                                    models generate content.
+                                </p>
+                            </div>
+
+                            <button>↗</button>
+
+                        </article>
+
+
+                        <article class="source-card">
+
+                            <div class="source-number">03</div>
+
+                            <div>
+                                <span class="source-type">
+                                    Guide
+                                </span>
+
+                                <h3>
+                                    Generative AI Explained
+                                </h3>
+
+                                <p>
+                                    A beginner-friendly explanation
+                                    of generative AI technology.
+                                </p>
+                            </div>
+
+                            <button>↗</button>
+
+                        </article>
+
+                    </div>
+
+                </section>
+
+
+                <!-- Related Questions -->
+
+                <section class="related">
+
+                    <div class="section-title">
+                        <h2>Related questions</h2>
+                    </div>
+
+                    <div class="questions">
+
+                        <button>
+                            How does generative AI work?
+                            <span>→</span>
+                        </button>
+
+                        <button>
+                            What are examples of generative AI?
+                            <span>→</span>
+                        </button>
+
+                        <button>
+                            What are the limitations of generative AI?
+                            <span>→</span>
+                        </button>
+
+                        <button>
+                            What is the future of generative AI?
+                            <span>→</span>
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+                <!-- Follow-up -->
+
+                <section class="follow-up">
+
+                    <h2>Ask a follow-up question</h2>
+
+                    <form id="followForm">
+
+                        <input
+                            type="text"
+                            id="followInput"
+                            placeholder="Ask anything about this topic..."
+                        >
+
+                        <button type="submit">
+                            ↑
+                        </button>
+
+                    </form>
+
+                </section>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- Toast -->
+
+    <div class="toast" id="toast">
+        Copied to clipboard
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
