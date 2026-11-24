@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Interface Collection</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            color: #fff;
+            background:
+                radial-gradient(circle at top left, #312e81 0%, transparent 35%),
+                radial-gradient(circle at bottom right, #164e63 0%, transparent 35%),
+                linear-gradient(135deg, #050816, #0f172a);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* Header */
+        header {
+            padding: 25px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .logo-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #8b5cf6, #06b6d4);
+            font-size: 20px;
+        }
+
+        .github {
+            padding: 10px 18px;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 25px;
+            color: #cbd5e1;
+        }
+
+        .github:hover {
+            background: rgba(255,255,255,0.08);
+        }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 80px 20px 60px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 30px;
+            background: rgba(139,92,246,0.15);
+            border: 1px solid rgba(139,92,246,0.4);
+            color: #c4b5fd;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 8vw, 80px);
+            line-height: 1;
+            background: linear-gradient(90deg, #ffffff, #c4b5fd, #67e8f9);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            color: #94a3b8;
+            line-height: 1.7;
+            font-size: 17px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .stat {
+            padding: 12px 20px;
+            border-radius: 12px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: #94a3b8;
+        }
+
+        .stat strong {
+            color: #fff;
+        }
+
+        /* Section */
+        .section-title {
+            margin-bottom: 25px;
+        }
+
+        .section-title h2 {
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        .section-title p {
+            color: #94a3b8;
+        }
+
+        /* Cards */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding-bottom: 70px;
+        }
+
+        .card {
+            min-height: 230px;
+            padding: 25px;
+            border-radius: 22px;
+            border: 1px solid rgba(255,255,255,0.12);
+            background: rgba(255,255,255,0.06);
+            backdrop-filter: blur(15px);
+            transition: 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(139,92,246,0.7);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+        }
+
+        .number {
+            color: #a78bfa;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .icon {
+            width: 50px;
+            height: 50px;
+            margin: 18px 0;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(139,92,246,0.15);
+            border: 1px solid rgba(139,92,246,0.3);
+            font-size: 22px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            font-size: 19px;
+        }
+
+        .card p {
+            color: #94a3b8;
+            line-height: 1.6;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .open {
+            color: #c4b5fd;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .open span {
+            display: inline-block;
+            transition: 0.2s;
+        }
+
+        .card:hover .open span {
+            transform: translateX(5px);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #64748b;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding: 60px 15px 45px;
+            }
+
+            .github {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container nav">
+
+        <div class="logo">
+            <div class="logo-icon">✦</div>
+            <span>AI Interface Collection</span>
+        </div>
+
+        <a href="https://github.com/" target="_blank" class="github">
+            GitHub ↗
+        </a>
+
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="hero">
+
+        <div class="badge">
+            UI TEMPLATE COLLECTION HACKATHON
+        </div>
+
+        <h1>Modern AI Interfaces</h1>
+
+        <p>
+            Explore a collection of modern and interactive AI interface
+            templates designed for the AI Interface Collection project.
+        </p>
+
+        <div class="stats">
+            <div class="stat">
+                <strong>12</strong> Interfaces
+            </div>
+
+            <div class="stat">
+                <strong>HTML</strong> CSS + JavaScript
+            </div>
+
+            <div class="stat">
+                <strong>Responsive</strong> Design
+            </div>
+        </div>
+
+    </section>
+
+
+    <section>
+
+        <div class="section-title">
+            <h2>Explore Interfaces</h2>
+            <p>Select an interface to open the project.</p>
+        </div>
+
+
+        <div class="grid">
+
+            <a href="ai-chat/index.html" class="card">
+                <div class="number">01</div>
+                <div class="icon">💬</div>
+                <h3>AI Chat</h3>
+                <p>
+                    Conversational AI assistant interface for chatting with
+                    an intelligent assistant.
+                </p>
+                <div class="open">Open Interface <span>→</span></div>
+            </a>
+
+
+            <a href="ai-chat-sidebar/index.html" class="card">
+                <div class="number">02</div>
+                <div class="icon">▣</div>
+                <h3>AI Chat Sidebar</h3>
+                <p>
+                    AI chat interface with a dedicated sidebar and
+                    workspace-style layout.
+                </p>
+                <div class="open">Open Interface <span>→</span></div>
+            </a>
+
+
+            <a href="ai-command-bar/index.html" class="card">
+                <div class="number">03</div>
+                <div class="icon">⌘</div>
+                <h3>AI Command Bar</h3>
+                <p>
+                    Compact command interface for interacting with AI
+                    through quick commands.
+                </p>
+                <div class="open">Open Interface <span>→</span></div>
+            </a>
+
+
+            <a href="ai-copilot/index.html" class="card">
+                <div class="number">04</div>
+                <div class="icon">✦</div>
+                <h3>AI Copilot</h3>
+                <p>
+                    AI Copilot interface designed to assist users inside
+                    a digital workspace.
+                </p>
+                <div class="open">Open Interface <span>→</span></div>
+            </a>
+
+
+            <a href="ai-insight-card/index.html" class="card">
+                <div class="number">05</div>
+                <div class="icon">◈</div>
+                <h3>AI Insight Card</h3>
+                <p>
+                    Card-based interface for displaying AI-generated
+                    insights and information.
+                </p>
+                <div class="open">Open Interface <span>→</span></div>
+            </a>
+
+
+            <a href="ai-prompt-interface/index.html" class="card">
+                <div class="number">06</div>
+                <div class="icon">✎</div>
+                <h3>AI Prompt Interface</h3>
+                <p>
+                    Interface focused on creating and submitting prompts
+                    to an AI system.
+                </p>
+                <div class="open">Open Interface <span>→</span></div>
+            </a>
+
+
+            <a href="ai-recomendation-card/index.html" class="card">
+                <div class="number">07</div>
+                <div class="icon">★</div>
+                <h3>AI Recommendation Card</h3>
+                <p>
+                    AI-powered recommendation interface for presenting
+                    useful suggestions.
+                </p>
+                <div class="open">Open Interface <span>→</span></div>
+            </a>
+
+
+            <a href="ai-responce-card/index.html" class="card">
+                <div class="number">08</div>
+                <div class="icon">✓</div>
+                <h3>AI Response Card</h3>
+                <p>
+                    Clean card interface for presenting structured
+                    AI-generated responses.
+                </p>
+                <div class="open">Open Interface <span>→</span></div>
+            </a>
+
+
+            <a href="ai-search/index.html" class="card">
+                <div class="number">09</div>
+                <div class="icon">⌕</div>
+                <h3>AI Search</h3>
+                <p>
+                    AI-powered search interface for discovering information
+                    using natural language.
+                </p>
+                <div class="open">Open Interface <span>→</span></div>
+            </a>
+
+
+            <a href="ai-search-results/index.html" class="card">
+                <div class="number">10</div>
+                <div class="icon">☷</div>
+                <h3>AI Search Results</h3>
+                <p>
+                    Search results interface designed for displaying
+                    AI-assisted information.
+                </p>
+                <div class="open">Open Interface <span>→</span></div>
+            </a>
+
+
+            <a href="ai-summary/index.html" class="card">
+                <div class="number">11</div>
+                <div class="icon">≡</div>
+                <h3>AI Summary</h3>
+                <p>
+                    Simple AI summary interface for presenting concise
+                    generated information.
+                </p>
+                <div class="open">Open Interface <span>→</span></div>
+            </a>
+
+
+            <a href="natural-language-query/index.html" class="card">
+                <div class="number">12</div>
+                <div class="icon">⌁</div>
+                <h3>Natural Language Query</h3>
+                <p>
+                    Natural language interface for asking questions and
+                    receiving AI-powered information.
+                </p>
+                <div class="open">Open Interface <span>→</span></div>
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+    AI Interface Collection © 2026
+</footer>
+
+</body>
+</html>
